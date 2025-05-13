@@ -1,0 +1,31 @@
+    <settings>
+        <servers>
+            <server>
+                <id>anypoint-exchange-v3</id>
+                <username>~~~Client~~~</username>
+                <password>c1ed9a5bf12643fe82d9f4f7c5ea3143~?~E5986207fEa04A8ea99520E1F090DA06</password>
+            </server>
+            <server>
+                <id>anypoint-exchange-v3-student-deployment</id>
+                <username>~~~Client~~~</username>
+                <password>accb242a4ee54d6e8c30247e06b55465~?~10135e98338645e0bD15212e8Cc5DB50</password>
+            </server>
+            <server>
+                <id>releases-ee</id>
+                <username>muletraining.nexus</username>
+                <password>eApHMgTm</password>
+            </server>
+        </servers>
+        <!-- <proxies>
+            <proxy>
+            <id>myproxy</id>
+            <active>true</active>
+            <protocol>http</protocol>
+            <host>proxy.somewhere.com</host>
+            <port>8080</port>
+            <username>proxyuser</username>
+            <password>somepassword</password>
+            <nonProxyHosts>*.google.com|ibiblio.org</nonProxyHosts>
+            </proxy>
+        </proxies> -->
+    </settings>
