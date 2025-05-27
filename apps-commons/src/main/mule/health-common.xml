@@ -3,20 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
-
-	<import file="health-common.xml" />
-
-	<flow name="api-ready">
-		<http:listener config-ref="apiHttpListenerConfig" path="/ready" doc:name="GET /ready">
+	<flow name="api-alive">
+		<http:listener config-ref="apiHttpListenerConfig" path="/alive" doc:name="GET /alive">
 			<http:response statusCode="200" />
 			<http:error-response statusCode="500">
 				<http:body>DOWN</http:body>
 			</http:error-response>
 		</http:listener>
-		<flow-ref name="check-all-dependencies-are-alive" doc:name="check-all-dependencies-are-alive" />
 		<set-payload value="UP" doc:name="UP" />
 	</flow>
-	<sub-flow name="check-all-dependencies-are-alive">
-		<logger />
-	</sub-flow>
 </mule>
